@@ -6,6 +6,7 @@ import { LiaAddressBookSolid } from "react-icons/lia";
 import Map from "../MapComponent/MapComponent"
 
 
+
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; // ذخیره شده در فایل .env.local
 const mapCenter = { lat: -34.397, lng: 150.644 };
 const mapZoom = 8;
