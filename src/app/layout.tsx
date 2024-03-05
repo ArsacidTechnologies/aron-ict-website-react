@@ -56,7 +56,7 @@ export default function RootLayout({
       <head >
       </head>
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${iranSans.className}`}>
+      <body className={`bg-[#fcfcfcda] dark:bg-black ${iranSans.className}`}>
         <Providers>
           <Header />
           {children}
