@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="ویژگی های آرون"
+            paragraph="شرکت آرون پایدار یکی از پیشروان در حوزه تکنولوژی است که به عنوان یک نمونه از شرکت‌هایی که به توسعه و استفاده از فناوری‌های نوین در جهت حل مسائل محیط زیست متمرکز هستند، شناخته می‌شود. ویژگی‌های برجسته این شرکت عبارتند از:            "
             center
           />
 

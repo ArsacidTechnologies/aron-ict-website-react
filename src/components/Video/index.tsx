@@ -13,8 +13,8 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="تجربه ی خاص تکنولوژی"
+          paragraph="به عنوان یک شرکت نوآور و متمرکز بر پایداری محیط زیست، آرون پایدار از تکنولوژی‌های متنوعی استفاده می‌کند تا به حل مسائل محیط زیستی مختلف کمک کند و به سازگاری بیشتر با محیط زیست کمک کند.          "
           center
           mb="80px"
         />
