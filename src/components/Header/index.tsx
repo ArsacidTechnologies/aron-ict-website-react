@@ -82,13 +82,13 @@ const Header = () => {
                       <ThemeToggler />
                     </div>
                     {menuData.map((menuItem, index) => (
-                      <li key={index} className={`group relative ${menuItem.title === "خانه" ? "ml-2 lg:ml-2" : ""}`}>
+                      <li key={index} className={`group relative ${menuItem.title === "خانه" ? "ml-2 lg:ml-2 text-white" : ""}`}>
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
                             className={`flex rounded-full px-2 text-base lg:mr-0 lg:inline-flex lg:px-2 ${usePathName === menuItem.path
                               ? "border"
-                              : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                              : "text-[#FFFFFF] hover:text-[#F5DFC7] dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
                             {menuItem.title}
@@ -97,7 +97,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-1 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1"
+                              className="flex cursor-pointer items-center justify-between py-1 text-base text-white hover:text-[#F5DFC7] dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -112,7 +112,7 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "block" : "hidden"
+                              className={`submenu  relative left-0 top-full rounded-lg bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "block" : "hidden"
                                 }`}
                             >
                               {menuItem.submenu.map((submenuItem, index) => (

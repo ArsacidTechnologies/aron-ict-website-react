@@ -1,27 +1,22 @@
 "use client";
-import React, { useRef, useEffect } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
+import { MapComponent, MapTypes } from "@neshan-maps-platform/mapbox-gl-react";
+import "@neshan-maps-platform/mapbox-gl-react/dist/style.css";
+import { useEffect, useState } from "react";
 
-const Map = ({ apiKey, center, zoom }) => {
-    const mapRef = useRef(null);
-
+function App() {
+    const [isBrowser, setIsBrowser] = useState(false);
     useEffect(() => {
-        const loader = new Loader({
-            apiKey: apiKey,
-            version: 'weekly',
-        });
+        // Update the state if window is available (i.e., we are in the browser)
+        if (typeof window !== 'undefined') {
+            setIsBrowser(true);
+        }
+    }, []);
+    return (
 
-        loader.load().then(() => {
-            const map = new google.maps.Map(mapRef.current, {
-                center,
-                zoom,
-            });
+        < MapComponent options={{ mapKey: "web.2a4f93a5aebb4391b3076584731cc3bc", mapType: MapTypes.neshanRasterNight }
+        } />
 
-            // اینجا می‌توانید مارکرها و سایر تنظیمات نقشه را اضافه کنید
-        });
-    }, [apiKey, center, zoom]);
+    );
+}
 
-    return <div ref={mapRef} style={{ height: '100%', width: '100%' }} />;
-};
-
-export default Map;
+export default App;

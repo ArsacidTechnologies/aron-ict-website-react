@@ -12,8 +12,8 @@ const mapZoom = 8;
 
 const Contact = () => {
   return (
-    <section id="contact" className="container backdrop-blur-sm  rounded-[10px] border overflow-hidden py-16 md:py-20 lg:py-10 lg:mb-12  flex">
-      <form className="form  w-[50%] h-[400px] flex flex-col justify-between border rounded-[12px] p-5">
+    <section id="contact" className="container backdrop-blur-sm bg-cyan-950 rounded-[5px] border overflow-hidden py-16 md:py-20 lg:py-10 lg:mb-12  flex">
+      <form className="form  w-[50%] h-[400px] flex flex-col justify-between border rounded-[8px] p-5">
         <input type="text" placeholder="نام" className="p-2 text-white placeholder-white outline-none rounded-sm" />
         <input type="email" placeholder="پست الکترونیک" className="p-2 placeholder-white  outline-none rounded-sm text-white" />
         <div className="text-message w-full h-[200px]">
@@ -27,8 +27,8 @@ const Contact = () => {
         <div className="flex items-center my-2">  <MdOutlineMarkEmailRead /><span className="mx-2">aron.ict@gmail.com</span></div>
         <div className="flex items-center ">  <FaPhone /> <span className="mx-2">+2177218737</span></div>
         <div className="flex items-center mb-5"> <LiaAddressBookSolid /> <span className="mx-2">تهران، میدان انقلاب، خیابان وصال شیرازی</span></div>
-        <div className="bg-red-800 h-[260px]">
-          <Map apiKey={apiKey} center={mapCenter} zoom={mapZoom} />
+        <div className=" h-[260px]">
+          <Map />
         </div>
       </div>
     </section>

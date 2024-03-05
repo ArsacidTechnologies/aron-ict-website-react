@@ -6,8 +6,41 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+// import { Font } from "public/fonts/Font";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+
+const iranSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum).woff2",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)_Black/IRANSansWeb(FaNum)_Black.woff2",
+      style: "Black",
+    },
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)_Bold/IRANSansWeb(FaNum)_Bold.woff2",
+      style: "Bold",
+    },
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)_Light/IRANSansWeb(FaNum)_Light.woff2",
+      style: "Light",
+    },
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)_Medium/IRANSansWeb(FaNum)_Medium.woff2",
+      style: "Medium",
+    },
+    {
+      path: "../../public/fonts/IRANSansWeb(FaNum)_UltraLight/IRANSansWeb(FaNum)_UltraLight.woff2",
+      style: "UltraLight",
+    },
+
+  ],
+})
+
+
 
 export default function RootLayout({
   children,
@@ -23,7 +56,7 @@ export default function RootLayout({
       <head >
       </head>
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-[#FCFCFC] dark:bg-black ${iranSans.className}`}>
         <Providers>
           <Header />
           {children}
