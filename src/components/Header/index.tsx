@@ -89,7 +89,7 @@ const Header = () => {
                             className={`flex rounded-full px-2 text-base lg:mr-0 lg:inline-flex lg:px-2 ${usePathName === menuItem.path
                               ? "border"
                               : "text-[#FFFFFF] hover:text-[#F5DFC7] dark:text-white/70 dark:hover:text-white"
-                              }`}
+                              } ${sticky ? "text-black border-bg-color-dark px-2" : ""}`}
                           >
                             {menuItem.title}
                           </Link>
@@ -137,7 +137,7 @@ const Header = () => {
                   <Link
                     href="/"
                     className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
-                      } `}
+                      }`}
                   >
                     <Image
                       src={`/images/logo/logo.png`}
