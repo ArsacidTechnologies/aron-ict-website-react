@@ -20,12 +20,6 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 3,
-    title: "پشتیبانی",
-    path: "/contact",
-    newTab: false,
-  },
-  {
     id: 4,
     title: "صفحات",
     newTab: false,
@@ -80,5 +74,12 @@ const menuData: Menu[] = [
       },
     ],
   },
+  {
+    id: 3,
+    title: "پشتیبانی",
+    path: "/contact",
+    newTab: false,
+  },
+
 ];
 export default menuData;

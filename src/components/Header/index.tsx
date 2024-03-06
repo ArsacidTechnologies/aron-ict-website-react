@@ -89,7 +89,7 @@ const Header = () => {
                             className={`flex rounded-full px-2 text-base lg:mr-0 lg:inline-flex lg:px-2 ${usePathName === menuItem.path
                               ? "border"
                               : "text-[#FFFFFF] hover:text-[#F5DFC7] dark:text-white/70 dark:hover:text-white"
-                              } ${sticky ? "text-black border-bg-color-dark px-2" : ""}`}
+                              } ${sticky ? "text-black border-bg-color-dark px-2" : ""} `}
                           >
                             {menuItem.title}
                           </Link>
@@ -97,10 +97,10 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-1 text-base text-white hover:text-[#F5DFC7] dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1"
+                              className={`flex cursor-pointer items-center justify-between py-1 text-base text-white hover:text-[#F5DFC7] dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1`}
                             >
                               {menuItem.title}
-                              <span className="pl-3">
+                              <span className={`pl-3  ${sticky ? "text-black border-bg-color-dark" : ""}`}>
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
                                     fillRule="evenodd"
@@ -159,7 +159,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div >
       </header >
     </>
   );
