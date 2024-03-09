@@ -41,14 +41,14 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
-          ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-          : "absolute bg-transparent"
-          }`}
+        className={`header left-0 top-0 z-40 flex w-full items-center ${
+          sticky
+            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
+            : "absolute bg-transparent"
+        }`}
       >
         <div className=" w-11/12">
           <div className="relative -mx-4 flex items-center justify-between">
-
             <div className="flex w-full items-center justify-between px-4">
               <div>
                 <button
@@ -58,38 +58,48 @@ const Header = () => {
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[7px] rotate-45" : " "
-                      }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? " top-[7px] rotate-45" : " "
+                    }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? "opacity-0 " : " "
-                      }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "opacity-0 " : " "
+                    }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[-8px] -rotate-45" : " "
-                      }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? " top-[-8px] -rotate-45" : " "
+                    }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar   absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-1 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
-                    ? "visibility top-full opacity-100"
-                    : "invisible top-[120%] opacity-0"
-                    }`}
+                  className={`navbar   absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-1 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                    navbarOpen
+                      ? "visibility top-full opacity-100"
+                      : "invisible top-[120%] opacity-0"
+                  }`}
                 >
-                  <ul className={`block max-h-[30px] py-5 lg:flex items-center lg:space-x-12 ${sticky ? '' : 'lg:bg-customColorForNavBar'} lg:pr-[70px] lg:rounded-l-full `}>
+                  <ul
+                    className={`block max-h-[30px] items-center py-5 lg:flex lg:space-x-12 ${sticky ? "" : "lg:bg-customColorForNavBar"} lg:rounded-l-full lg:pr-[70px] `}
+                  >
                     <div className="ml-8">
                       <ThemeToggler />
                     </div>
                     {menuData.map((menuItem, index) => (
-                      <li key={index} className={`group relative ${menuItem.title === "خانه" ? "ml-2 lg:ml-2 text-white" : ""}`}>
+                      <li
+                        key={index}
+                        className={`group relative ${menuItem.title === "خانه" ? "ml-2 text-white lg:ml-2" : ""}`}
+                      >
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex rounded-full px-2 text-base lg:mr-0 lg:inline-flex lg:px-2 ${usePathName === menuItem.path
-                              ? "border"
-                              : "text-[#FFFFFF] hover:text-[#F5DFC7] dark:text-white/70 dark:hover:text-white"
-                              } ${sticky ? "text-black border-bg-color-dark px-2" : ""} `}
+                            className={`flex rounded-full px-2 text-base lg:mr-0 lg:inline-flex lg:px-2 ${
+                              usePathName === menuItem.path
+                                ? "border"
+                                : "text-[#fff] hover:text-[#F5DFC7] dark:text-white/70 dark:hover:text-white"
+                            } ${sticky ? "border-bg-color-dark px-2 text-black" : ""} `}
                           >
                             {menuItem.title}
                           </Link>
@@ -97,10 +107,12 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className={`flex cursor-pointer items-center justify-between py-1 text-base text-white hover:text-[#F5DFC7] dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1`}
+                              className={`flex cursor-pointer items-center justify-between py-1 text-base text-white hover:text-[#fff] dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-1`}
                             >
                               {menuItem.title}
-                              <span className={`pl-3  ${sticky ? "text-black border-bg-color-dark" : ""}`}>
+                              <span
+                                className={`pl-3  ${sticky ? "border-bg-color-dark text-white" : ""}`}
+                              >
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
                                     fillRule="evenodd"
@@ -112,8 +124,9 @@ const Header = () => {
                               </span>
                             </p>
                             <div
-                              className={`submenu  relative left-0 top-full rounded-lg bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "block" : "hidden"
-                                }`}
+                              className={`submenu  relative left-0 top-full rounded-lg bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                                openIndex === index ? "block" : "hidden"
+                              }`}
                             >
                               {menuItem.submenu.map((submenuItem, index) => (
                                 <Link
@@ -136,8 +149,9 @@ const Header = () => {
                 <div className="w-60 max-w-full px-4 xl:mr-12">
                   <Link
                     href="/"
-                    className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
-                      }`}
+                    className={`header-logo block w-full ${
+                      sticky ? "py-5 lg:py-2" : "py-8"
+                    }`}
                   >
                     <Image
                       src={`/images/logo/logo.png`}
@@ -155,12 +169,11 @@ const Header = () => {
                     />
                   </Link>
                 </div>
-
               </div>
             </div>
           </div>
-        </div >
-      </header >
+        </div>
+      </header>
     </>
   );
 };
