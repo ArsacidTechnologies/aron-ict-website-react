@@ -8,7 +8,7 @@ const Features = () => {
     <>
       <section id="features" className=" py-16 md:py-20 lg:py-28">
         <div className="in-[320px]:text-center m-auto flex h-[500px] w-[65%] rounded-t-[75px] border border-b-0 border-white bg-white/10 backdrop-blur-lg max-[600px]:translate-y-[-230px] sm:translate-y-[-380px]  lg:translate-y-[-380px] lg:rounded-t-[170px]">
-          <div className="flex justify-center rounded-t-[75px] border border-b-2 border-white p-[25px] text-justify lg:rounded-t-[170px]">
+          <div className="flex justify-center rounded-t-[75px] border border-b-0 border-white p-[25px] text-justify lg:rounded-t-[170px]">
             <div className="container flex w-9/12 flex-col gap-[50px] ">
               <div className="py-5 pb-36 text-center text-white lg:text-2xl">
                 Our Partnerships and trusted
